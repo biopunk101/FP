@@ -8,7 +8,7 @@ import pandas as pd
 
 TarPath = 'D:/temp/'
 
-M = pd.read_excel('D:/list.xlsx') #檔案批量分類到資料夾
+M = pd.read_excel('d:/Workbench/pycode/fp/list.xlsx') #檔案批量分類到資料夾
 
 item = M['Item']
 cnt = 0

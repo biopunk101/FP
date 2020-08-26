@@ -8,6 +8,9 @@ from os.path import join
 #print('輸入來源資料夾路徑:')
 #SrcPath = input()
 MyPath = 'D:/temp/'
+LogPath = MyPath + 'log.txt'
+
+f = open(LogPath, 'w')
 
 #print('輸入目的資料夾路徑:')
 #TarPath = input()
@@ -23,10 +26,10 @@ for SrcPath, dirs, files in walk(MyPath):
     #print (FileName)
     if not os.path.exists(MyPath+'/'+FileName):
         shutil.move(FullPath, DestPath)
-        print('將檔案:', i, '移動至資料夾:',DestPath )
+        print('將', i, '移動至資料夾:',DestPath, file = f )
+    else:
+        print(i, '已存在於資料夾:',DestPath, file = f )
 
-
-
-
+f.close()
 
 
